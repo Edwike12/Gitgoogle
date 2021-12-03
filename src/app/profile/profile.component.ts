@@ -7,11 +7,12 @@ import {ServicesService} from '../services.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
+  profile:any[string];
 
   constructor(private ServicesService:ServicesService ) {
     this.ServicesService.getProfileInfo().subscribe(profile=> {
       console.log(profile);
-      
+      this.profile = profile;
     });
   }
 
