@@ -20,4 +20,9 @@ export class ServicesService {
     return this.http.get("https://api.github.com/users/"+ this.username + "?user_Url="+ this.userUrl +"&access_Token=" +this.accessToken)
     
   }
+
+  getProfileRepos(){
+    return this.http.get("https://api.github.com/users/"+ this.username + "/repos?user_Url="+ this.userUrl +"&access_Token=" +this.accessToken)
+
+  }
 }
