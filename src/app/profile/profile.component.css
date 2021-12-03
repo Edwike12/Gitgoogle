@@ -1,9 +1,9 @@
+body{
+    padding: 700px;
+}
 .search-form{
-    padding-top: 50px;
-    width: 100%;
-    background-color:blue;
+    background-color: darkblue;
     align-items: center;
-    color:#EEC390;
     padding:50px;
 }
 .panel.panel.default{
