@@ -25,4 +25,10 @@ export class ServicesService {
     return this.http.get("https://api.github.com/users/"+ this.username + "/repos?user_Url="+ this.userUrl +"&access_Token=" +this.accessToken)
 
   }
+
+  updateProfile(username:string){
+    this.username;username;
+  }
+
+ 
 }
