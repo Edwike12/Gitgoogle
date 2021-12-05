@@ -15,27 +15,26 @@ export class ServicesService {
 
   constructor(private http:HttpClient) { 
     console.log("services is now ready");
-    this.username = 'Edwike12';
+    this.username = "Edwike12";
    
   }
 
   getProfileInfo (){
-    return this.http.get("https://api.github.com/users/"+ this.username + "?user_Url="+ this.userUrl +"&access_Token=" +this.accessToken)
+    return this.http.get<any[]>("https://api.github.com/users/"+ this.username + "?user_Url="+ this.userUrl +"&access_Token=" +this.accessToken)
     
   }
 
   getProfileRepos(){
-    return this.http.get("https://api.github.com/users/"+ this.username + "/repos?user_Url="+ this.userUrl +"&access_Token=" +this.accessToken)
+    return this.http.get<any[]>("https://api.github.com/users/"+ this.username + "/repos?user_Url="+ this.userUrl +"&access_Token=" +this.accessToken)
 
   }
 
-  getUserName(usernames:string){
-    return this.http.get("https://api.github.com/users/"+ this.username + "/username?user_Url="+ this.userUrl +"&access_Token=" +this.accessToken)
-   
-  }
-
-  updateProfile(username:string){
+    updateProfile(username:string){
     this.username;username;
+  }
+
+  updateRepos(repo:string){
+    return this.repo =repo;
   }
 
  
